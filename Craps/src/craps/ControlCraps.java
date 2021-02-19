@@ -52,7 +52,7 @@ public class ControlCraps
 			{
 				estado=1; //ganar
 			}
-			//error 
+			//error fixed adding else
 			else if(tiro==2 || tiro==3 || tiro==12)
 			{
 				estado=2; //perder
@@ -134,7 +134,7 @@ public class ControlCraps
 	}
 	
 	/**
-	 * Reset game.
+	 * Reset game. Added to fix a bug.
 	 */
 	public void resetGame()
 	{
