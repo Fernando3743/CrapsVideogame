@@ -1,0 +1,15 @@
+package craps;
+
+public class ControlCraps 
+{
+	private Dado dado1,dado2;
+	private int tiro,punto,estado;
+	private int[] carasDados;
+	
+	//Constructor	
+	public ControlCraps()
+	{
+		
+	}
+
+}

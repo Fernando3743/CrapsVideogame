@@ -1,0 +1,3 @@
+INDEX VERSION 1.131+C:\Users\ferna\Documents\Universidad\Semestre 2021-1\ProgramacionInteractiva\crapsWorkspace\.metadata\.plugins\org.eclipse.jdt.core
+2132976335.index
+3150830534.index
