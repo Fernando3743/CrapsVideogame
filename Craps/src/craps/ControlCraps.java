@@ -1,5 +1,15 @@
+/*
+ * Programacion interactiva
+ * Author: Luis Fernando Lara S - 2024730-3743
+ * Caso 1 Juego Craps
+ */
 package craps;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class ControlCraps. Clase que maneja la logica del juego.
+ * Determina el valor del tiro, el estado del juego, el valor del punto, etc.
+ */
 public class ControlCraps 
 {
 	private Dado dado1,dado2;
@@ -7,6 +17,9 @@ public class ControlCraps
 	private boolean lanzamiento;
 	private int[] carasDados;
 	
+	/**
+	 * Instantiates a new control craps. Constructor de la clase que se encarga de crear los objetos a usar.
+	 */
 	//Constructor	
 	public ControlCraps()
 	{
@@ -16,6 +29,9 @@ public class ControlCraps
 		carasDados = new int[2];		
 	}
 	
+	/**
+	 * Calcular tiro. Simula el lanzamiento de los dados y establece el valor del tiro.
+	 */
 	public void calcularTiro()
 	{
 		carasDados[0]=dado1.getCaraVisible();
@@ -23,6 +39,10 @@ public class ControlCraps
 		tiro=carasDados[0]+carasDados[1];
 	}
 	
+	/**
+	 * Determinar juego. Determina el estado del juego: estado = 1 ganar,
+	 * estado = 2 perder, estado = 3 punto.
+	 */
 	public void determinarJuego()
 	{
 		if(lanzamiento)
@@ -51,22 +71,45 @@ public class ControlCraps
 		
 	}
 	
+	/**
+	 * Gets the tiro.
+	 *
+	 * @return the tiro
+	 */
 	public int getTiro() {
 		return tiro;
 	}
 
+	/**
+	 * Gets the punto.
+	 *
+	 * @return the punto
+	 */
 	public int getPunto() {
 		return punto;
 	}
 
+	/**
+	 * Gets the estado.
+	 *
+	 * @return the estado
+	 */
 	public int getEstado() {
 		return estado;
 	}
 
+	/**
+	 * Gets the caras dados.
+	 *
+	 * @return the caras dados
+	 */
 	public int[] getCarasDados() {
 		return carasDados;
 	}
 
+	/**
+	 * Ronda punto. Establece el estado del juego cuando se está en la ronda punto.
+	 */
 	private void rondaPunto()
 	{
 		if(tiro==punto)
@@ -80,12 +123,19 @@ public class ControlCraps
 		}
 	}
 	
+	/**
+	 * Sets the abandono. Establece el estado del juego si el usuario abandona 
+	 * en la ronda del punto.
+	 */
 	public void setAbandono()
 	{
 		estado=2;//perdio
 		lanzamiento=true;
 	}
 	
+	/**
+	 * Reset game.
+	 */
 	public void resetGame()
 	{
 		tiro=0;

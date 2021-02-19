@@ -1,12 +1,27 @@
+/*
+ * Programacion interactiva
+ * Author: Luis Fernando Lara S - 2024730-3743
+ * Caso 1 Juego Craps
+ */
+
 package craps;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class VistaConsola. Clase encargada de realizar las operaciones
+ * I/O por linea de comando usando objeto Scanner.
+ */
 public class VistaConsola
 {
 	private ControlCraps controlCraps;
 	private String pregunta;
 	private Scanner lecturaDatos;
 	
+	/**
+	 * Instantiates a new vista consola. Constructor de la clase
+	 * inicia los objetos auxiliares
+	 */
 	//Constructor
 	public VistaConsola()
 	{
@@ -14,6 +29,9 @@ public class VistaConsola
 		lecturaDatos = new Scanner(System.in);
 	}
 	
+	/**
+	 * Iniciar juego. Inicia la ronda de juego
+	 */
 	public void iniciarJuego()
 	{
 		System.out.println("Desea lanzar los dados? y/n");
@@ -74,6 +92,9 @@ public class VistaConsola
 		}
 	}
 	
+	/**
+	 * Seguir juego. Inicia una nueva ronda de juego.
+	 */
 	private void seguirJuego()
 	{
 		controlCraps.resetGame();
