@@ -6,6 +6,9 @@
 
 package craps;
 
+import java.awt.EventQueue;
+
+
 // TODO: Auto-generated Javadoc
 /**
  * The Class PrincipalCraps. Clase que contiene el metodo main e inicia el programa
@@ -20,9 +23,13 @@ public class PrincipalCraps {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		VistaConsola vistaConsola = new VistaConsola();
-		
-		vistaConsola.iniciarJuego();
+		EventQueue.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				VistaGUIGridBagLayout myVista = new VistaGUIGridBagLayout();
+			}
+		});
 
 	}
 
